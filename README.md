@@ -29,7 +29,7 @@ Follow these steps to get started with Chatty:
 
 3. Configure your Firebase project and update the Firebase configuration in the app.
 
-4. Start the development server using `npm start`.
+4. Start the development server using `npm run dev`.
 
 5. Explore and customize the Connect app to meet your requirements.
 
