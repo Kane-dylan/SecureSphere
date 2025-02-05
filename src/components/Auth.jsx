@@ -35,14 +35,14 @@ const Auth = ({ setisAuth }) => {
           rel="stylesheet"
         />
       </Helmet>
-      <div className="w-1/2 bg-neutral-400 p-8 rounded md:rounded-lg shadow-lg text-center font-Newsreader  ">
-        <h1 className="text-2xl font-semibold font-Newsreader  mb-4">Welcome to SecureSphere</h1>
-        <p className="text-m mb-4 font-bold">
+      <div className="w-2/3 bg-neutral-400/60 p-8 rounded md:rounded-lg shadow-lg text-center font-Newsreader text-wrap ">
+        <h1 className="text-3xl font-semibold font-Newsreader  mb-4">Welcome to <span className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-green-200 to-red-300 text-transparent bg-clip-text whitespace-nowrap">SecureSphere</span>!</h1>
+        <p className="text-m mb-4 font-Newsreader">
           SecureSphere is a user-friendly chat application designed to facilitate
           seamless communication among friends and users within a shared virtual
           space.
         </p>
-        <p className="text-xl font-semibold mb-4">Sign in to enter the room</p>
+        <p className="text-2xl font-semibold mb-4">Sign in to enter the room</p>
         <button
           onClick={signin}
           className="bg-blue-600 hover:bg-slate-300 text-white hover:text-black py-2 px-4 rounded-full transition duration-300 ease-in-out transform "
