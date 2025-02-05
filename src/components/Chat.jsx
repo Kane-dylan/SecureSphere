@@ -60,12 +60,18 @@ const Chat = ({ room }) => {
     setNewMessage("");
   };
 
+  const chatBG = {
+    backgroundImage: 'url("https://i.pinimg.com/736x/be/a2/79/bea2799c7e12842f10246ef7581ec36a.jpg")',
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat"
+  };
+
   return (
-    <div className="bg-gray-100 p-4 justify-center">
+    <div className="lg:w-1/3 md:w-1/3 w-2/3 bg-neutral-400 p-4 justify-center rounded-lg">
       <div className="mb-4">
         <h1 className="text-2xl font-bold">Welcome to {room.toUpperCase()}</h1>
       </div>
-      <div className="max-w-xl mx-auto bg-white p-4 rounded shadow-lg">
+      <div className="max-w-5xl mx-auto p-4 rounded shadow-lg" style={chatBG}>
         <div
           className="mb-4 space-y-4"
           style={{
@@ -75,21 +81,21 @@ const Chat = ({ room }) => {
           ref={messageListRef}
         >
           {messages.map((message) => (
-            <div key={message.id} className="flex space-x-2">
+            <div key={message.id} className="flex space-x-2 text-white">
               <img
                 src={message.avatar || "URL_TO_DEFAULT_AVATAR"}
                 alt="User"
                 className="w-8 h-8 rounded-full"
               />
-              <div className="font-semibold">{message.user}:</div>
+              <div className="font-semibold text-white">{message.user}:</div>
               <div>{message.text}</div>
             </div>
           ))}
         </div>
         <form onSubmit={handleSubmit}>
-          <div className="flex space-x-2">
+          <div className="flex md:flex-row flex-col gap-2">
             <input
-              className="flex-grow border rounded py-2 px-3"
+              className="flex-grow border rounded py-2 px-3 focus:outline-none bg-neutral-300 hover:bg-white"
               value={newMessage}
               onChange={(e) => setNewMessage(e.target.value)}
               placeholder="Enter your message"
@@ -100,12 +106,12 @@ const Chat = ({ room }) => {
             />
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-blue-600 text-white rounded py-2 px-4"
-              style={{
-                borderTopLeftRadius: 0,
-                borderTopRightRadius: 0,
-                borderBottomRightRadius: 0,
-              }}
+              className="w-auto md:w-1/3 bg-blue-500 hover:bg-blue-600 text-white  py-2 px-4 rounded-lg"
+              // style={{
+              //   borderTopLeftRadius: 0,
+              //   borderTopRightRadius: 0,
+              //   borderBottomRightRadius: 0,
+              // }}
             >
               Send
             </button>

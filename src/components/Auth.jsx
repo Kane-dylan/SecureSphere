@@ -31,21 +31,21 @@ const Auth = ({ setisAuth }) => {
     >
       <Helmet>
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
           rel="stylesheet"
         />
       </Helmet>
-      <div className="w-full bg-white p-8 rounded shadow-lg text-center font-montserrat ">
-        <h1 className="text-2xl font-semibold font-monsterat  mb-4">Welcome to CHATTY</h1>
+      <div className="w-1/2 bg-neutral-400 p-8 rounded md:rounded-lg shadow-lg text-center font-Newsreader  ">
+        <h1 className="text-2xl font-semibold font-Newsreader  mb-4">Welcome to SecureSphere</h1>
         <p className="text-m mb-4 font-bold">
-          Chatty is a user-friendly chat application designed to facilitate
+          SecureSphere is a user-friendly chat application designed to facilitate
           seamless communication among friends and users within a shared virtual
           space.
         </p>
         <p className="text-xl font-semibold mb-4">Sign in to enter the room</p>
         <button
           onClick={signin}
-          className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
+          className="bg-blue-600 hover:bg-slate-300 text-white hover:text-black py-2 px-4 rounded-full transition duration-300 ease-in-out transform "
         >
           Sign in with Google
         </button>

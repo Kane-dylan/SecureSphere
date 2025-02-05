@@ -20,26 +20,30 @@ function App() {
     Cookie.remove("auth-token");
     setisAuth(false);
   };
+
+  
   const backgroundImageStyle = {
-    backgroundImage: 'url("https://media.istockphoto.com/id/1283724500/vector/social-media-seamless-pattern-doodle-style.jpg?s=612x612&w=0&k=20&c=oVZ7nnt1dHPQhGt4oQrZpVdldIjijwxG7misyIckvA4=")',
+    backgroundImage: 'url("https://i.pinimg.com/736x/bc/51/2a/bc512abf3ecbfbc0a5acc12e14e9baa5.jpg")',
+    // backgroundImage: 'url("https://i.pinimg.com/736x/c4/8b/fe/c48bfe2cb35e2fde166905490919dc6a.jpg")',
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
   };
+
   return (
-    <div className="bg-gray-100 min-h-screen p-4 w-full font-montserrat" style={backgroundImageStyle}>
+    <div className="bg-gray-100 min-h-screen p-4 w-full font-Newsreader" style={backgroundImageStyle}>
       <div className="flex flex-col items-center justify-center h-full w-400px p-4 rounded shadow-lg mt-64 mr-200px ml-200px">
         {isAuth ? (
           <>
             {room ? (
               <Chat room={room} />
             ) : (
-              <div className="flex flex-col items-center justify-center font-montserrat font-bold">
-              <label className="text-lg mb-2">Create Room</label>
+              <div className="flex flex-col items-center justify-center font-Newsreader font-bold">
+              <label className="md:text-3xl text-lg mb-2 text-white ">Create Room</label>
               <div className="flex space-x-2 ml-20">
                 <input
                   ref={inputRoomRef}
-                  className="flex-grow border rounded py-2 px-3"
+                  className="flex-grow border rounded py-2 px-3 focus:outline-none cursor-text "
                 />
                 <button
                   onClick={() => setRoom(inputRoomRef.current.value)}
@@ -51,7 +55,7 @@ function App() {
             </div>
             
             )}
-            <div className="mt-4">
+            <div className="flex mt-4">
               <button
                 onClick={handleSignout}
                 className="bg-red-500 hover:bg-red-600 text-white rounded-full py-2 px-4 transition duration-300 ease-in-out transform hover:scale-105"
