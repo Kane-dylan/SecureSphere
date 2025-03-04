@@ -32,7 +32,7 @@ The goal of **SecureSphere** is to provide a **robust real-time chat experience*
 Follow these steps to set up **SecureSphere** on your local machine:  
 
 ### 1️⃣ **Clone the Repository**  
-```
+``` sh
 git clone https://github.com/Kane-dylan/SecureSphere.git
 cd SecureSphere
 ```
