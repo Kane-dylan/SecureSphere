@@ -33,12 +33,12 @@ The goal of **SecureSphere** is to provide a robust real-time chat experience wh
 Follow these steps to set up **SecureSphere** on your local machine:
 
 1. **Clone the Repository**
-    ```sh
+    ```
     git clone https://github.com/Kane-dylan/SecureSphere.git
     cd SecureSphere
     ```
 2. **Install Dependencies**
-    ```sh
+    ```
     npm install
     ```
 3. **Configure Firebase**
@@ -46,7 +46,7 @@ Follow these steps to set up **SecureSphere** on your local machine:
     - Update the Firebase configuration in `src/firebaseConfig.js`.
 
 4. **Run the Development Server**
-    ```sh
+    ```
     npm run dev
     ```
     Now open your browser and start chatting! 🚀
